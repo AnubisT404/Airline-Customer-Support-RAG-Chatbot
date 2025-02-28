@@ -19,6 +19,9 @@ RAG:
   chunk_overlap: 100
   k: 2
 
+tavily_search:
+  max_results: 2
+
 langsmith:
   tracing: "true"
-  project_name: "Airline-Customer-Support"
+  project_name: "Airline-Customer-Service"
