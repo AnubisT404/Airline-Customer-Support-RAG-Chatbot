@@ -2,12 +2,12 @@ gradio==4.41.0
 ipykernel==6.29.5
 langchain==0.2.14
 langchain-community==0.2.12
-langchain-core==0.2.33
+langchain-core==0.2.40
 langchain-openai==0.1.22
 langchain-text-splitters==0.2.2
-langgraph==0.2.40
+langgraph==0.2.44
 langgraph-checkpoint==1.0.3
-langsmith==0.1.99
+langsmith==0.1.147
 numpy==1.26.4
 openai==1.41.0
 pandas==2.2.2
