@@ -2,7 +2,7 @@ from langgraph.prebuilt import tools_condition
 from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
 from typing import Literal
-from tools.tools_flights import fetch_user_flight_information
+from tools.flights import fetch_user_flight_information
 from utils.utilities import create_entry_node, create_tool_node_with_fallback
 from agentic_system.build_assistants import Assistant, ToFlightBookingAssistant, ToBookCarRentalAssistant, ToHotelBookingAssistant, ToBookExcursionAssistant
 from agentic_system.build_runnables import AIAgentRunnables

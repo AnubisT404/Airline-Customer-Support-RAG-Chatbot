@@ -56,14 +56,13 @@ def update_dates(file, backup_file):
 def prepare_travel_sql_db(travel_db_url):
     """Loads the travel SQL database and saves it in the data folder in the project's main directory."""
 
-    # travel_db_url = "https://storage.googleapis.com/benchmarks-artifacts/travel-db/travel2.sqlite"
     local_file = here("data/travel2.sqlite")
-    # The backup lets us restart for each tutorial section
     backup_file = here("data/travel2.backup.sqlite")
 
     overwrite = False
     if overwrite or not os.path.exists(local_file):
         response = requests.get(travel_db_url)
+        print(response.status_code)
         response.raise_for_status()  # Ensure the request was successful
         with open(local_file, "wb") as f:
             f.write(response.content)
