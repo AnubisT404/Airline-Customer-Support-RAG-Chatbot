@@ -25,7 +25,7 @@ TAVILY_SEARCH_KEY=your_tavily_search_api_key_here
 LANGCHAIN_API_KEY=your_langchain_api_key_here
 ```
 
-Then, download files and preprocess them:
+Then, download the data files and preprocess them:
 ```
 python3 data_preparation/download_data.py
 python3 data_preparation/prepare_vector_db.py
@@ -33,5 +33,5 @@ python3 data_preparation/prepare_vector_db.py
 
 Run the interface:
 ```
-python3 src/utils/app.py
+python3 src/app.py
 ```
