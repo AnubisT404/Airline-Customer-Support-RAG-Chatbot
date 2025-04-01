@@ -1,0 +1,17 @@
+FROM python:3.10
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY backend/src ./src
+COPY backend/utils ./utils
+COPY backend/agentic_system ./agentic_system
+COPY backend/tools ./tools
+COPY backend/config.yml ./config.yml
+COPY backend/.here .here
+
+EXPOSE 8000
+
+CMD ["uvicorn", "src.app:app", "--host", "0.0.0.0", "--port", "8000"]

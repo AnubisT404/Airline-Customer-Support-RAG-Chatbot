@@ -9,8 +9,8 @@ from agentic_system.build_runnables import AIAgentRunnables
 from agentic_system.router import Router
 from agentic_system.build_state import State
 from langchain_core.messages import ToolMessage
-AGENT_RUNNABLES = AIAgentRunnables()
 
+AGENT_RUNNABLES = AIAgentRunnables()
 
 class AgenticGraph:
     def __init__(self) -> None:

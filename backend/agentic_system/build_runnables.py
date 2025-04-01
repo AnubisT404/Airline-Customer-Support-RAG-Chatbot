@@ -3,7 +3,7 @@ from tools.flights import search_flights, update_ticket_to_new_flight, cancel_ti
 from tools.hotels import search_hotels, book_hotel, update_hotel, cancel_hotel
 from tools.excursions import search_trip_recommendations, book_excursion, update_excursion, cancel_excursion
 from tools.rental_car import search_car_rentals, book_car_rental, update_car_rental, cancel_car_rental
-from load_config import LoadConfig
+from utils.load_config import LoadConfig
 from langchain_community.tools.tavily_search import TavilySearchResults
 from agentic_system.build_prompts import AgentPrompts
 from agentic_system.router import Router

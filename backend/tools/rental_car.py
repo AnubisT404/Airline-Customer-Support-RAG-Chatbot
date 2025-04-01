@@ -2,11 +2,10 @@ import sqlite3
 from datetime import date, datetime
 from typing import Optional, Union
 from langchain_core.tools import tool
-from load_config import LoadConfig
+from utils.load_config import LoadConfig
 
 CFG = LoadConfig()
 db = CFG.local_file
-
 
 @tool
 def search_car_rentals(

@@ -1,0 +1,25 @@
+directories:
+  local_file: "/shared/data/travel2.sqlite"
+  backup_file: "/shared/data/travel2.backup.sqlite"
+
+api:
+  host: "prepare_data"
+  port: 8000
+  endpoint: "/prepare-data/"
+
+RAG:
+  doc_dir: "/shared/data/swiss_faq.md"
+  vectordb: "/shared/data/airline_policy_vectordb"
+  collection_name: airline-policy
+  k: 2
+
+openai_models:
+  model: gpt-4o-mini
+  embedding_model: text-embedding-3-small
+
+tavily_search:
+  max_results: 2
+
+langsmith:
+  tracing: "true"
+  project_name: "airline-assistant"

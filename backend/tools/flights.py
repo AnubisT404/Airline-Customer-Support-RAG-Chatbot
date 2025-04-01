@@ -4,10 +4,9 @@ from typing import Optional
 import pytz
 from langchain_core.runnables import ensure_config
 from langchain_core.tools import tool
-from load_config import LoadConfig
+from utils.load_config import LoadConfig
 
 CFG = LoadConfig()
-# database will be used throughout this module in flight methods
 db = CFG.local_file
 
 
@@ -24,7 +23,7 @@ def fetch_user_flight_information() -> list[dict]:
     passenger_id = configuration.get("passenger_id", None)
     if not passenger_id:
         raise ValueError("No passenger ID configured.")
-
+    
     conn = sqlite3.connect(db)
     cursor = conn.cursor()
 

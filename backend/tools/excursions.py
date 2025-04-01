@@ -1,10 +1,9 @@
 import sqlite3
 from typing import Optional
 from langchain_core.tools import tool
-from load_config import LoadConfig
+from utils.load_config import LoadConfig
 
 CFG = LoadConfig()
-# database will be used throughout this module in flight methods
 db = CFG.local_file
 
 
