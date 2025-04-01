@@ -1,0 +1,19 @@
+directories:
+  local_file: "/shared/data/travel2.sqlite"
+  backup_file: "/shared/data/travel2.backup.sqlite"
+  
+urls:
+  travel_db_url: https://storage.googleapis.com/benchmarks-artifacts/travel-db/travel2.sqlite
+  airline_policy_url: https://storage.googleapis.com/benchmarks-artifacts/travel-db/swiss_faq.md
+
+openai_models:
+  model: gpt-4o-mini
+  embedding_model: text-embedding-3-small
+
+RAG:
+  doc_dir: "/shared/data/swiss_faq.md"
+  vectordb: "/shared/data/airline_policy_vectordb"
+  collection_name: airline-policy
+  chunk_size: 500
+  chunk_overlap: 100
+  k: 2

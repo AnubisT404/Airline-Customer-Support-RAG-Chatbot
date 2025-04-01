@@ -1,0 +1,16 @@
+FROM python:3.10
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY data_prepare/src ./src
+COPY data_prepare/utils ./utils
+COPY data_prepare/config.yml ./config.yml
+COPY data_prepare/.here .here
+COPY data_prepare/data_preparation_api.py ./data_preparation_api.py
+
+EXPOSE 8001
+
+CMD ["uvicorn", "data_preparation_api:app", "--host", "0.0.0.0", "--port", "8001"]
